@@ -56,3 +56,14 @@ Route::get('/anasayfa',function (){
 Route::get('iletisim',function (){
    return view('iletisim');
 });
+
+Route::get('goster','AdminController@goster');
+
+//Route::get('pages','PageController@index');
+Route::get('pages/create','PageController@create');
+
+Route::resource('pages','PageController');
+
+Route::get('yenisayfa/{sayfa?}','PageController@deneme');
+
+Route::get('aktar','PageController@VeriAktarma');
