@@ -48,3 +48,11 @@ Route::middleware(['auth'])->group(function (){
        return "Gizli";
     });
 });
+
+Route::get('/anasayfa',function (){
+    return view('anasayfa');
+});
+
+Route::get('iletisim',function (){
+   return view('iletisim');
+});
